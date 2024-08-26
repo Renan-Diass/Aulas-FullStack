@@ -1,0 +1,71 @@
+/* Estilo do rodapé */
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+}
+
+/* Corpo principal com flexbox */
+.body {
+    margin-top: 60px; /* Espaço extra para o cabeçalho fixo */
+    margin-bottom: 60px; /* Espaço extra para o rodapé fixo */
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos com espaço entre eles */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas, se necessário */
+}
+
+/* Estilo para a lista não ordenada */
+.lista-nao-ordenada {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    width: 45%; 
+    height: 300px;
+    overflow: hidden
+}
+.itens-lista {
+    text-align: left;
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.lista-ordenada {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    width: 45%; 
+    height: 300px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .lista-nao-ordenada, .lista-ordenada {
+        width: 100%; 
+    }
+}
